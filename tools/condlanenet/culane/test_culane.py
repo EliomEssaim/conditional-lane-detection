@@ -174,9 +174,9 @@ def single_gpu_test(seg_model,
             dst_show_dir = os.path.join(show, basename)
             mkdir(show)
             cv2.imwrite(dst_show_dir, img_vis)
-            dst_gt_dir = os.path.join(show, basename + '.gt.jpg')
-            mkdir(show)
-            cv2.imwrite(dst_gt_dir, img_gt_vis)
+            # dst_gt_dir = os.path.join(show, basename + '.gt.jpg')
+            # mkdir(show)
+            # cv2.imwrite(dst_gt_dir, img_gt_vis)
 
         batch_size = data['img'].data[0].size(0)
         for _ in range(batch_size):

@@ -119,3 +119,9 @@ work_dirs/
 *.pth
 *.py~
 *.sh~
+
+#mysetting
+/results_dst_robotaxi/*
+/show_dst_robotaxi/*
+*.avi
+*.pth
