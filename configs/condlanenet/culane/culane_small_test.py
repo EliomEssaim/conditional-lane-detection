@@ -3,7 +3,7 @@
 """
 # global settings
 dataset_type = 'CulaneDataset'
-data_root = "/disk1/zhouyang/dataset/culane"
+data_root = "/data/workspace/dataset/culane"
 mask_down_scale = 8
 hm_down_scale = 16
 num_lane_classes = 1
