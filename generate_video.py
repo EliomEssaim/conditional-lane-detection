@@ -1,6 +1,20 @@
 import cv2
 import glob
 import os
+import argparse
+
+class VideoGenerator():
+    def __init__(self) -> None:
+        self.parse_args()
+
+    def parse_args(self):
+        parser = argparse.ArgumentParser(description='webcam_sub setting')
+        # 自己添加的参数
+        parser.add_argument('--path','-p',default='/data/workspace/yelongjie/Project/conditional-lane-detection/',help="determine subscriber topic name")
+        parser.add_argument('--node_name','-n',  default="video_sub_py",help="set node_name")
+        
+        self.args, unknown = parser.parse_known_args()
+        
 
 #根据自己的实际情况更改目录。
 #要转换的图片的保存地址，按顺序排好，后面会一张一张按顺序读取。
@@ -11,10 +25,13 @@ fps = 24
 size = (1640,590)
 
 path='/data/workspace/yelongjie/Project/conditional-lane-detection/'       
-selected_dir='show_dst_robotaxi'
-video_name = 'back'
+selected_dir='show_culane'
+video_name = 'driver_100'
 path = path + selected_dir
 fileList=os.listdir(path)
+
+fileList = [file_name for file_name in fileList if "driver_100_30" in file_name]
+
 fileList.sort()
 
 videopath = '/data/workspace/yelongjie/Project/conditional-lane-detection/' + video_name+ '.avi'

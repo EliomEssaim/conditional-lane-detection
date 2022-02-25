@@ -123,5 +123,6 @@ work_dirs/
 #mysetting
 /results_dst_robotaxi/*
 /show_dst_robotaxi/*
+/show_culane/*
 *.avi
 *.pth

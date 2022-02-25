@@ -231,7 +231,7 @@ log_config = dict(
     ])
 
 total_epochs = 16
-device_ids = "0,1"
+device_ids = "6,7"
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
 work_dir = './work_dirs/exps/culane/small'

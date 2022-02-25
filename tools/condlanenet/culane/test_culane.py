@@ -218,6 +218,8 @@ def main():
     model = build_detector(cfg.model)
     load_checkpoint(model, args.checkpoint, map_location='cpu')
     model = MMDataParallel(model, device_ids=[0])
+    
+    print("Total number of paramerters in networks is {}  ".format(sum(x.numel() for x in model.parameters())))
     if not args.show:
         show_dst = None
     else:
